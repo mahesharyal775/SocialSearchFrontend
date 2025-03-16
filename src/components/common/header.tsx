@@ -2,22 +2,14 @@ import { FaBars, FaFire, FaRegUserCircle } from "react-icons/fa";
 import { BsChatDotsFill } from "react-icons/bs";
 import { IoAdd, IoSettingsOutline } from "react-icons/io5";
 import { IoMdClose, IoMdNotificationsOutline } from "react-icons/io";
-import { HiMagnifyingGlass } from "react-icons/hi2";
 import { useState } from "react";
 import UserSidebar from "../modal/userSidebar";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { FaCircleUser } from "react-icons/fa6";
-import { GiBullseye } from "react-icons/gi";
 import { AiOutlineLogout } from "react-icons/ai";
 
-interface HeaderProps {
-  searchTerm: string;
-  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
-}
-
-// const Header = ({ searchTerm, setSearchTerm }: HeaderProps) => {
-const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
+const Header = () => {
   const [openUserSidebar, setOpenUserSidebar] = useState<boolean>(false);
   const [openNotification, setOpenNotification] = useState<boolean>(false);
   const [openSidebarMenu, setOpenSidebarMenu] = useState<boolean>(false);
@@ -52,24 +44,7 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
           />
         </div>
 
-        <div className="">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Social Search"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="bg-gray-100 px-4 py-[10px] pl-10 min-w-[200px] md:min-w-[300px] lg:min-w-[500px] pr-12 rounded-4xl focus:outline-none w-full placeholder:text-gray-700"
-            />
-            {/* Search icon */}
-            <button
-              type="submit"
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-gray-800"
-            >
-              <HiMagnifyingGlass className="h-6 w-6 cursor-pointer" />
-            </button>
-          </div>
-        </div>
+        <div className=""></div>
 
         <div className="flex space-x-5 items-center">
           <BsChatDotsFill className="h-6 w-6 cursor-pointer hover:text-gray-800" />
@@ -155,37 +130,6 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
               <div className="flex items-center space-x-5">
                 <IoSettingsOutline className="h-5 w-5" />
                 <p className={``}>Setting</p>
-              </div>
-            </Link>
-            <Link
-              to="#"
-              onClick={() => setOpenSidebarMenu}
-              className={`block py-2 uppercase text-gray-600 hover:text-black p-5 `}
-            >
-              <div className="flex items-center space-x-5">
-                <FaFire className="h-5 w-5" />
-                <p className={``}>Popular</p>
-              </div>
-            </Link>
-
-            <Link
-              to="#"
-              onClick={() => setOpenSidebarMenu}
-              className={`block py-2 uppercase text-gray-600 hover:text-black p-5 `}
-            >
-              <div className="flex items-center space-x-5">
-                <GiBullseye className="h-5 w-5" />
-                <p className={``}>Explore</p>
-              </div>
-            </Link>
-            <Link
-              to="#"
-              onClick={() => setOpenSidebarMenu}
-              className={`block py-2 uppercase text-gray-600 hover:text-black p-5 `}
-            >
-              <div className="flex items-center space-x-5">
-                <GiBullseye className="h-5 w-5" />
-                <p className={``}>All</p>
               </div>
             </Link>
 

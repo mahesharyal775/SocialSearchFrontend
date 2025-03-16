@@ -60,43 +60,6 @@ const LeftBar = () => {
                 <p className={`${openSidebar ? "" : "hidden"}`}>Setting</p>
               </div>
             </Link>
-            <Link
-              to="#"
-              onClick={toggleSidebar}
-              className={`block py-2 uppercase text-gray-600 hover:text-black p-5 ${
-                openSidebar ? "" : "hidden"
-              }`}
-            >
-              <div className="flex items-center space-x-5">
-                <FaFire className="h-5 w-5" />
-                <p className={`${openSidebar ? "" : "hidden"}`}>Popular</p>
-              </div>
-            </Link>
-
-            <Link
-              to="#"
-              onClick={toggleSidebar}
-              className={`block py-2 uppercase text-gray-600 hover:text-black p-5 ${
-                openSidebar ? "" : "hidden"
-              }`}
-            >
-              <div className="flex items-center space-x-5">
-                <GiBullseye className="h-5 w-5" />
-                <p className={`${openSidebar ? "" : "hidden"}`}>Explore</p>
-              </div>
-            </Link>
-            <Link
-              to="#"
-              onClick={toggleSidebar}
-              className={`block py-2 uppercase text-gray-600 hover:text-black p-5 ${
-                openSidebar ? "" : "hidden"
-              }`}
-            >
-              <div className="flex items-center space-x-5">
-                <GiBullseye className="h-5 w-5" />
-                <p className={`${openSidebar ? "" : "hidden"}`}>All</p>
-              </div>
-            </Link>
 
             <Link
               to="#"
@@ -113,7 +76,6 @@ const LeftBar = () => {
           </nav>
         </div>
       </div>
-
     </div>
   );
 };
